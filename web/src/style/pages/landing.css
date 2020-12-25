@@ -1,0 +1,51 @@
+#page-landing {
+    background:  #00000a;
+    /*rgba(42, 42, 46, 1);*/
+    height: 100vh;
+    width: 100vw;
+
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+}
+
+#page-landing .content-wrapper {
+    height: 100%;
+    max-height: 700px;
+    width: 100%;
+    max-width: 1100px;
+
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page-landing .content-wrapper main h1{
+    font-size: 40px;
+    max-width: 350px;
+}
+
+
+.content-wrapper .enter-app{
+    height: 60px;
+    width: 60px;
+    
+
+    background: #f8da30;
+    border-radius: 60px;
+    bottom: 0;
+    margin-bottom: 40px;
+    position: absolute;
+    
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.content-wrapper .enter-app:hover {
+    background: #f830c6;
+}
+
