@@ -16,6 +16,23 @@ function Home() {
         <Link to="/profile" className="enter-profile">
           <FiUser/>
         </Link>
+
+        <div className="post-content">
+          <div>
+            <h5>What do you want to say to the world?</h5>
+            <span data-text="true">
+              <input type="text" placeholder="add your post here"/>
+            </span>
+            <div dir="auto" role="button" className="post-button">
+              <span>
+                <span>Post</span>
+              </span>
+            </div>
+          </div>
+          
+          
+          
+        </div>
        
       </div>
     </div>
