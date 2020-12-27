@@ -14,7 +14,7 @@ function Landing() {
     <div id="page-landing">
       <div className="content-wrapper">
         <main>
-          <h1>Oiê mundo</h1>
+          <h1>Oiê mundaum</h1>
         </main>
 
         <img src={landingImg} alt="women on a video chat draw"/>
