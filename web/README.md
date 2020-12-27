@@ -1,8 +1,8 @@
-#Social
+# Social
 webpage
 
 ## technologies
 ReactJS, NodeJS, TS, SQLite HTML and CSS
 
-###landing image
+## landing image
 Canva.com
