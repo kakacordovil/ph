@@ -13,6 +13,7 @@ interface PostParams {
   id: string;
 }
 
+
 function Home() {
   const params = useParams();
   const [post,setPost] = useState<Post[]>([]);
@@ -27,6 +28,13 @@ function Home() {
     return <p>Wait just a moment...</p>;
   }
 
+  const handleInput = event => {
+    setPost(event.target.value);  };
+
+  const logValue = () => {
+    console.log(post);
+  };
+
   return(
     <div id="page-home">
       <div className="content-wrapper">
@@ -34,16 +42,18 @@ function Home() {
           <h1>Home</h1>
         </main>
 
+
         <div className="post-content">
           <div>
             <h5>What do you want to say to the world?</h5>
             <span data-text="true">
-              <input type="text" placeholder="add your post here"/>
+              <input onChange={handleInput} type="text" placeholder="add your post here"/>
             </span>
             <div dir="auto" role="button" className="post-button">
-              <button type="button">Post</button>
+              <button onClick={logValue => alert('posted')} type="button">Post</button>
             </div>
           </div>
+
 
           {post.map( post => {
             return(

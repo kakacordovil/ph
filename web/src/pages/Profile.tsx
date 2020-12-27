@@ -9,12 +9,16 @@ import '../style/pages/profile.css';
 
 
 function Profile() {
+  const user = ('kaka');
+  
   return(
     <div id="page-profile">
       <div className="content-wrapper">
         <main>
           <h1>Profile</h1>
         </main>
+
+
         
         <Link to="/app" className="enter-home">
           <FiEdit/>
