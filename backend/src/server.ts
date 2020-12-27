@@ -21,9 +21,11 @@ app.post('/posts', (request, response) => {
         content
     } = request.body;
 
+    const postsRepository = getRepository(Post);
+
     return response.json({ text: 'post'});
 });
 
-const postsRepository = getRepository(Post);
+
 
 app.listen(3333);
