@@ -36,7 +36,11 @@ export default {
   };
 
   const schema = Yup.object().shape({
-    content: Yup.string().required().min(280)
+    content: Yup.string().required()
+  });
+
+  await schema.validate(data, {
+    abortEarly: false,
   });
 
   const post = postsRepository.create(data);
