@@ -16,12 +16,18 @@ app.use(express.json());
 //    return response.json({message: 'who run the world?'})
 //});
 
-app.post('/posts', (request, response) => {
+app.post('/posts', async (request, response) => {
     const {
         content
     } = request.body;
 
     const postsRepository = getRepository(Post);
+
+    const post = postsRepository.create({
+        content
+    });
+
+    await postsRepository.save(post);
 
     return response.json({ text: 'post'});
 });
