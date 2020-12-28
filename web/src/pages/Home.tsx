@@ -18,6 +18,17 @@ function Home() {
   const params = useParams();
   const [post,setPost] = useState<Post[]>([]);
 
+  const [message, setMessage] = useState('');
+  
+  function onClick() {
+    const request = { "content": message }
+    api.post('postcreate', request).then(response => window.location.reload())
+      .catch(error => {
+      console.error('There was an error!', error);
+    });
+    
+  }
+
   useEffect(() => {
     api.get('posts').then(response => {
       setPost(response.data);
@@ -28,13 +39,7 @@ function Home() {
     return <p>Wait just a moment...</p>;
   }
 
-  const handleInput = event => {
-    setPost(event.target.value);  };
-
-  const logValue = () => {
-    console.log(post);
-  };
-
+  
   return(
     <div id="page-home">
       <div className="content-wrapper">
@@ -47,10 +52,10 @@ function Home() {
           <div>
             <h5>What do you want to say to the world?</h5>
             <span data-text="true">
-              <input onChange={handleInput} type="text" placeholder="add your post here"/>
-            </span>
+              <input type="text" value={message} onChange={e => setMessage(e.target.value)} placeholder="add your post here" />
+              </span>
             <div dir="auto" role="button" className="post-button">
-              <button onClick={logValue => alert('posted')} type="button">Post</button>
+              <button onClick={onClick} type="button">Post</button>
             </div>
           </div>
 

@@ -7,6 +7,6 @@ const routes = Router();
 
 routes.get('/posts', PostsController.index);
 routes.get('/posts/:id', PostsController.show);
-routes.post('/posts', PostsController.create);
+routes.post('/postcreate', PostsController.create);
 
 export default routes;
