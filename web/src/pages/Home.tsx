@@ -53,7 +53,7 @@ function Home() {
             <h5>What do you want to say to the world?</h5>
             <span data-text="true">
               <input type="text" value={message} onChange={e => setMessage(e.target.value)} placeholder="add your post here" />
-              </span>
+            </span>
             <div dir="auto" role="button" className="post-button">
               <button onClick={onClick} type="button">Post</button>
             </div>

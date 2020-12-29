@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiHome } from 'react-icons/fi';
 import { FiEdit } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ import '../style/pages/profile.css';
 
 
 function Profile() {
-  const user = ('kaka');
+  const [username, setUsername] = useState("");
   
   return(
     <div id="page-profile">
