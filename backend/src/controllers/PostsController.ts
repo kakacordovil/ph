@@ -3,7 +3,7 @@ import { getRepository } from 'typeorm';
 import postView from '../views/PostsViews';
 import * as Yup from 'yup';
 
-import Post from '../models/Post';
+import Post from "../models/Post";
 
 export default {
   async index(request: Request, response: Response){
